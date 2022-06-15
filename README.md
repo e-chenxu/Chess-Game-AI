@@ -15,20 +15,13 @@ List of features:
 
 2. Change Directory to downloaded folder directory.
 
-3. Type
-
-make
-
+3. Type 'make'
 
 To Run:
 
-1. Type
+1. Type 'cd bin'
 
-cd bin
-
-2. Type
-
-./Chess_vs_AI
+2. Type './Chess_vs_AI'
 
 # How to Play
 
