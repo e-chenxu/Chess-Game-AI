@@ -3,7 +3,7 @@
 Chess text game equipped with an minimax AI.
 
 List of features:
-- Local 2 Player Chess (includes special moves)
+- Local 2 Player Chess (includes all special moves: en passant, castling, pawn promotion)
 - Chess vs adjustable difficulty AI
 - AI includes endgame adjustments, minimax, alpha-beta pruning, etc.
 - Save Replay of entire game at the end
@@ -33,5 +33,6 @@ Then type the letter and number coordinate of where you want the piece to move.
 
 For example:
 Typing "a2a4" at the start of the game will move the pawn at "a2" to the empty space at "a4".
+Applies to special moves also (last pair of coordinates should still be where you want the piece to go)
 
 Chess moves will be applied.
