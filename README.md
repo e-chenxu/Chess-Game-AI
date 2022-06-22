@@ -9,6 +9,8 @@ List of features:
 - Save Replay of entire game at the end
 - Built in Text Tutorial
 
+<img src="images/fastestcheckmate.png" width="550">
+
 # How to Install
 
 1. Download code and unzip
