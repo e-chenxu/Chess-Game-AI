@@ -10,6 +10,7 @@
 // bot games and human vs human
 void botgame();
 void humangame();
+void botvbotgame();
 void tutorial();
 
 void tutorial(){
@@ -112,7 +113,7 @@ void botgame(){
     int movecheck = 0;
     char winnerflag = 'D';
     int currentbot = GetBot(W);
-    // ai vs ai
+    // human vs ai
     while(1){
         if (currentbot == 0){
             do {
@@ -262,6 +263,74 @@ void humangame(){
     DeleteMove(M);
 }
 
+void botvbotgame(){
+    // initialize boards first row and player structure move struture
+    PLAYER *W, *B;
+    BMOVE *M;
+    W = NewPlayer(1);
+    B = NewPlayer(1);
+    M = NewMove();
+    char op;
+    int opt;
+    printf("What level would you like the AIs to be? (Input an integer 1-10): ");
+    scanf(" %d", &opt);
+    if (opt > 0 && opt < 12){
+        SetAI(M, opt - 1);
+    }
+    char board[8][8] = {{'R'},{'N'},{'B'},{'Q'},{'K'},{'B'},{'N'},{'R'}};
+    startboard(board);
+    printf("Chess game started (AI vs. AI)\n");
+    printboard(board);
+    char currentcolor = 'W';
+    int turn = 0;
+    char winnerflag = 'D';
+    // ai vs ai
+    while(1){
+        // bot stuff
+        printf("Calculating move...\n");
+        bestbotmove(board,currentcolor,W,B,M);
+        printboard(board);
+        if (currentcolor == 'W')
+            printf("White chose %c%c%c%c!\n", GetX(M) + 'a', GetY(M) + '1', GetI(M) + 'a', GetJ(M) + '1');
+        else
+            printf("Black chose %c%c%c%c!\n", GetX(M) + 'a', GetY(M) + '1', GetI(M) + 'a', GetJ(M) + '1');
+        // switch bot and current color
+        SetMovesList(M, GetX(M), GetY(M), GetI(M), GetJ(M), turn);
+        turn++;
+        if (currentcolor == 'W')
+            currentcolor = 'B';
+        else
+            currentcolor = 'W';
+        // check end conditions
+        if  (winnercheck(board, currentcolor, W, B) == 1){
+            if (currentcolor == 'W'){
+                printf("Checkmate! Black Wins!\n");
+                winnerflag = 'B';
+            }
+            else {
+                printf("Checkmate! White Wins!\n");
+                winnerflag = 'W';
+            }
+            break;
+        }
+        else if (winnercheck(board, currentcolor, W, B) == 2){
+            printf("It's a stalemate!\n");
+            winnerflag = 'S';
+            break;
+        }
+    }
+    printf("Save replay? (Type 'Y' or 'N'): ");
+    scanf(" %c",&op);
+    if (op == 'Y'){
+        SetAI(M,opt-1);
+        Replay(W, B, M, turn, currentcolor,winnerflag);
+        printf("Saved replay to 'replay.txt'\n\n");
+    }
+    DeletePlayer(W);
+    DeletePlayer(B);
+    DeleteMove(M);
+}
+
 int main(void){
    int op;
    // loops through program until exit condition
@@ -270,23 +339,27 @@ int main(void){
         printf("How to Play: Type the coordinates of what you want to move and where you want to move to. Ex. 'a2a4'\n");
         printf("1. Start New Game (Human vs. Human)\n");
         printf("2. Start New Game (Human vs. AI)\n");
-        printf("3. View Chess Tutorial\n");
-        printf("4. Exit Game (Also Enter '0' When In-Game to Exit Early)\n");
+        printf("3. Watch New Game (AI vs. AI)\n");
+        printf("4. View Chess Tutorial\n");
+        printf("5. Exit Game (Also Enter '0' When In-Game to Exit Early)\n");
         printf("Choose option: ");
         scanf(" %d", &op);
         switch(op){
         case 1:
-          humangame();
-          break;
+            humangame();
+            break;
         case 2:
-          botgame();
-          break;
+            botgame();
+            break;
         case 3:
-          tutorial();
-          break;
+            botvbotgame();
+            break;
         case 4:
-          printf("Goodbye!\n");
-          return 0;
+            tutorial();
+            break;
+        case 5:
+            printf("Goodbye!\n");
+            return 0;
         }
    }
 }
