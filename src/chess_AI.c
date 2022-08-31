@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-// mini max alpha beta function thingy 
+// mini max alpha beta function, essentially this function recursively looks through a tree and returns the best move
 int minimax(char board[8][8], char color, char incolor, int alpha, int beta, int depth, int minmaxer, PLAYER *W, PLAYER *B, BMOVE *M){
     // end of tree
     if (depth == 0)
@@ -206,6 +206,7 @@ int endgame(int x, int y, int i, int j, char board[8][8], char color, PLAYER *W,
                     else
                         eatflag = 0;
                     movetoboard(m,n,valid[z][0],valid[z][1], tmpboard, W, B, 1);
+                    // this will try to get the pieces near the king
                     if (board[m][n] == 'K' || board[m][n] - 32 == 'K'){
                         if (inCheck(tmpboard, colorop, W, B) == 1){
                             pointcount+=2;
