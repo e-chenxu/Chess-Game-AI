@@ -138,7 +138,6 @@ void Replay(PLAYER *W, PLAYER *B, BMOVE *M, int turn, char color, char winner){
        exit(10);
     }
     fprintf(fp,"#Chess_vs_AI\nVersion: 1.0\nFilename: replay.txt\nDate: %s\n",ctime(&t));
-    fprintf(fp,"#Made by Team 24:\nEric Chen\nAdam Feke\nLarry Truong\nDelong Zeng\n");
     if (GetBot(W) == 1)
          fprintf(fp,"\n#Settings\nWhite (AI): Level %d\n",GetAI(M));
     else

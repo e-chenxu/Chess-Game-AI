@@ -14,7 +14,6 @@ int minimax(char board[8][8], char color, char incolor, int alpha, int beta, int
     // end of tree
     if (depth == 0)
         return getPoints(board,incolor);
-    // variables
     char tmpboard[8][8];
     int valid[27][2];
     int count = 0;
@@ -141,7 +140,7 @@ int minimax(char board[8][8], char color, char incolor, int alpha, int beta, int
     
 }
 
-// endgame stuff
+// if nearing the end, this function algorithm will prioritize pieces to corner the king
 int endgame(int x, int y, int i, int j, char board[8][8], char color, PLAYER *W, PLAYER *B){
     int kingx,kingy,m,n,z,o,p;
     char letterzop,letteraop,colorop;
