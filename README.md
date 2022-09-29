@@ -6,8 +6,7 @@ List of features:
 - Local 2 Player Chess (includes all special moves: en passant, castling, pawn promotion)
 - Chess vs adjustable difficulty AI
 - AI includes endgame adjustments, minimax, alpha-beta pruning, etc.
-- Save Replay of entire game at the end
-- Built in Text Tutorial
+- Save replay of entire game at the end
 
 <img src="images/fastestcheckmate.png" width="550">
 
