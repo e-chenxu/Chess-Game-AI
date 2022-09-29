@@ -11,77 +11,6 @@
 void botgame();
 void humangame();
 void botvbotgame();
-void tutorial();
-
-void tutorial(){
-    int tutorial_topic;
-    while(1){
-        printf("\nTutorial:");
-        printf("\n\nHow do chess pieces move?");
-        printf("\n1. The Pawn");
-        printf("\n2. The Knight");
-        printf("\n3. The Rook");
-        printf("\n4. The Bishop");
-        printf("\n5. The Queen");
-        printf("\n6. The King");
-        printf("\n\nConditions for special moves");
-        printf("\n7. En Passant");
-        printf("\n8. Castling");
-        printf("\n9. Return to Menu");
-        printf("\n\nPlease enter a number corresponding to the topic you want to learn more about: ");
-        scanf(" %d", &tutorial_topic);
-        switch (tutorial_topic){
-            case 1:
-                printf("\nThe pawn:");
-                printf("\nA pawn advances a single square vertically, but it has the option to move two squares on its first turn. Eats diagonally in front of it, one square range.");
-                break;
-            case 2: 
-                printf("\nThe knight:");
-                printf("\nKnights move in an L-shape. Only eats where it lands.");
-                break;
-            case 3: 
-                printf("\nThe rook:");
-                printf("\nThe rook can move horizontally or vertically through any number of unoccupied squares.");
-                break;
-            case 4:
-                printf("\nThe bishop:");
-                printf("\nThe bishop can move in any direction diagonally through any number of unoccupied squares.");
-                break;
-            case 5:
-                printf("\nThe queen:");
-                printf("\nThe queen can move any number of unoccupied squares vertically, horizontally, or diagonally.");
-                break;
-            case 6:
-                printf("\nThe king:");
-                printf("\nThe king can move one square in any direction unless the square is already occupied by an ally, or the move would place the king in check.");
-                break;
-            case 7:
-                printf("\nEn Passant:");
-                printf("\nAllows a pawn to move diagonally to an empty space and eat the pawn behind it.");
-                printf("\n\nConditions required for En Passant:");
-                printf("\nThe capturing pawn must be on its 5th rank.");
-                printf("\nThe captured pawn must have just moved two squares in a single turn.");
-                printf("\nThe capture must be made immediately after the enemy pawn performs the double-step.");
-                break;
-            case 8:
-                printf("\nCastling:");
-                printf("\nAllows moving both the king and a rook to pass and land next to each other.");
-                printf("\n\nConditions required for castling:");
-                printf("\nNeither the king nor the chosen rook has previously moved.");
-                printf("\nThere are no pieces in between the king and the chosen rook.");
-                printf("\nThe king is not currently in check.");
-                printf("\nThe king does not pass through a square that is attacked by an enemy piece.");
-                printf("\nThe king does not end up in check.");
-                break;
-            case 9:
-                return;
-        }
-        printf("\n\nContinue or Return to Menu: \n1. Continue\n2. Return to Menu\nInput a number: ");
-        scanf(" %d", &tutorial_topic);
-        if (tutorial_topic == 2)
-            return;
-    }
-}
 
 void botgame(){
     // initialize boards first row and player structure move struture
@@ -340,8 +269,7 @@ int main(void){
         printf("1. Start New Game (Human vs. Human)\n");
         printf("2. Start New Game (Human vs. AI)\n");
         printf("3. Watch New Game (AI vs. AI)\n");
-        printf("4. View Chess Tutorial\n");
-        printf("5. Exit Game (Also Enter '0' When In-Game to Exit Early)\n");
+        printf("4. Exit Game (Also Enter '0' When In-Game to Exit Early)\n");
         printf("Choose option: ");
         scanf(" %d", &op);
         switch(op){
@@ -355,9 +283,6 @@ int main(void){
             botvbotgame();
             break;
         case 4:
-            tutorial();
-            break;
-        case 5:
             printf("Goodbye!\n");
             return 0;
         }
