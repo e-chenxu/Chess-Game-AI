@@ -5,19 +5,17 @@
 #define CHESS_STRUCT_H
 
 // structures
-typedef struct player PLAYER; // player info structure
+typedef struct player PLAYER;   // player info structure
 typedef struct bestmove BMOVE;  // best move info
 
 // structure of player
 struct player {
-        char color; // just called white w , black b
-        int botornot; // 0 if its human, 1 if its bot
-        int passantx; // column where a pawn is that can be passanted
-        int kingflag; // checks if king has moved, 1 if has not moved and can castle, default
-        int rrookflag; // checks if right rok can castle
-        int lrookflag; // checks if left rook can castle
-        char *storedinfo; // stores info so temp arrays dont mess with it
-        int currentpoints; // current points of player
+        int botornot;          // 0 if its human, 1 if its bot
+        int passantx;          // column where a pawn is that can be passanted
+        int kingflag;          // checks if king has moved, 1 if has not moved and can castle, default
+        int rrookflag;         // checks if right rok can castle
+        int lrookflag;         // checks if left rook can castle
+        char *storedinfo;      // stores info so temp arrays dont mess with it
 };
 
 // current best move for the AI, 

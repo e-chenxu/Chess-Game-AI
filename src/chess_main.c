@@ -42,6 +42,7 @@ void botgame(){
     int movecheck = 0;
     char winnerflag = 'D';
     int currentbot = GetBot(W);
+
     // human vs ai
     while(1){
         if (currentbot == 0){
@@ -119,7 +120,7 @@ void botgame(){
     DeleteMove(M);
 }
 
-// dude vs dude
+// human vs human
 void humangame(){
     int x,y,i,j;
     // initialize boards first row and player structure move struture
@@ -213,9 +214,10 @@ void botvbotgame(){
     char currentcolor = 'W';
     int turn = 0;
     char winnerflag = 'D';
+
     // ai vs ai
     while(1){
-        // bot stuff
+        // calculate bot move
         printf("Calculating move...\n");
         bestbotmove(board,currentcolor,W,B,M);
         printboard(board);

@@ -1,5 +1,5 @@
 // board header
-// contains all the board stuff
+// contains all the board functions
 
 #include "chess_struct.h"
 
