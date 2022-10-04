@@ -20,15 +20,15 @@ struct player {
 
 // current best move for the AI, 
 struct bestmove {
-        int bestx; // column of piece moving
-        int besty; // row of piece moving
-        int besti; // column of where piece move to
-        int bestj; // row of where piece move to
-        int level; // level of the AI
-        char currentpiece; // what the current piece they r trying to move, so it can check if repetition
-        int repeatcheck; // checks for too many repeated moves
-        char *storedrepeat; // store repeat info
-        char *storedmoves; // list of stored moves
+        int bestx;             // column of piece moving
+        int besty;             // row of piece moving
+        int besti;             // column of where piece move to
+        int bestj;             // row of where piece move to
+        int level;             // level of the AI
+        char currentpiece;     // what the current piece they r trying to move, so it can check if repetition
+        int repeatcheck;       // checks for too many repeated moves
+        char *storedrepeat;    // store repeat info
+        char *storedmoves;     // list of stored moves
 };
 
 // player structure

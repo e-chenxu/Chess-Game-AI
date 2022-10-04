@@ -75,7 +75,7 @@ int getPoints(char board[8][8], char color){
     int sumW = 0;
     int sumB = 0;
     int x,y;
-    // check the board and count points for colors, pawn = 1, knight = 3, bishop = 3, rook = 5, queen 9, king = 100 (so it doesnt sacrifice it)
+    // check the board and count points for colors
     for (x = 0; x < 8; x++){
         for (y = 0; y < 8; y++){
             switch(board[x][y]){
