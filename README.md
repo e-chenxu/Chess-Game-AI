@@ -1,6 +1,6 @@
 # Chess-Game-AI
 
-Chess text game equipped with an minimax AI.
+Complete Chess text game equipped with an minimax AI built from the ground up.
 
 List of features:
 - Local 2 Player Chess (includes all special moves: en passant, castling, pawn promotion)
