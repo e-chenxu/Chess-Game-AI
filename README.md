@@ -10,6 +10,12 @@ List of features:
 
 <img src="images/fastestcheckmate.png" width="550">
 
+### WORK IN PROGRESS (GUI)
+
+<kbd>
+  <img src="images/chess.png" width="350">
+</kbd>
+
 # How to Install
 
 1. Download code and unzip
