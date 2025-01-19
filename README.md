@@ -26,9 +26,11 @@ List of features:
 
 To Run:
 
-1. Type 'cd bin'
+1. Create a bin folder
 
-2. Type './Chess_vs_AI'
+2. Type 'cd bin'
+
+3. Type './Chess_vs_AI'
 
 # How to Play
 
