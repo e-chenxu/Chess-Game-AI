@@ -1,0 +1,3 @@
+C:/Users/Eric/Desktop/code/Chess-Game-AI/build/CMakeFiles/QtExample.dir
+C:/Users/Eric/Desktop/code/Chess-Game-AI/build/CMakeFiles/edit_cache.dir
+C:/Users/Eric/Desktop/code/Chess-Game-AI/build/CMakeFiles/rebuild_cache.dir
