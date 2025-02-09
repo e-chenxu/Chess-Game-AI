@@ -1,0 +1,14 @@
+setx CMAKE_C_COMPILER "C:\Qt\Tools\mingw1310_64\bin\gcc.exe"
+setx CMAKE_CXX_COMPILER "C:\Qt\Tools\mingw1310_64\bin\g++.exe"
+
+
+cd C:\Users\Eric\Desktop\code\Chess-Game-AI\
+rmdir /s /q build  # Delete broken build directory
+mkdir build
+cd build
+cmake -G "MinGW Makefiles" ..
+mingw32-make -j4
+
+
+or
+cmake -G "MinGW Makefiles" -DCMAKE_C_COMPILER="C:/Qt/Tools/mingw1310_64/bin/gcc.exe" -DCMAKE_CXX_COMPILER="C:/Qt/Tools/mingw1310_64/bin/g++.exe" ..
