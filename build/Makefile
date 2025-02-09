@@ -116,24 +116,74 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named QtExample
+# Target rules for targets named QtChess
 
 # Build rule for target.
-QtExample: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QtExample
-.PHONY : QtExample
+QtChess: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QtChess
+.PHONY : QtChess
 
 # fast build rule for target.
-QtExample/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtExample.dir\build.make CMakeFiles/QtExample.dir/build
-.PHONY : QtExample/fast
+QtChess/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/build
+.PHONY : QtChess/fast
+
+#=============================================================================
+# Target rules for targets named QtChess_autogen_timestamp_deps
+
+# Build rule for target.
+QtChess_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QtChess_autogen_timestamp_deps
+.PHONY : QtChess_autogen_timestamp_deps
+
+# fast build rule for target.
+QtChess_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess_autogen_timestamp_deps.dir\build.make CMakeFiles/QtChess_autogen_timestamp_deps.dir/build
+.PHONY : QtChess_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named QtChess_autogen
+
+# Build rule for target.
+QtChess_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 QtChess_autogen
+.PHONY : QtChess_autogen
+
+# fast build rule for target.
+QtChess_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess_autogen.dir\build.make CMakeFiles/QtChess_autogen.dir/build
+.PHONY : QtChess_autogen/fast
+
+QtChess_autogen/mocs_compilation.obj: QtChess_autogen/mocs_compilation.cpp.obj
+.PHONY : QtChess_autogen/mocs_compilation.obj
+
+# target to build an object file
+QtChess_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/QtChess_autogen/mocs_compilation.cpp.obj
+.PHONY : QtChess_autogen/mocs_compilation.cpp.obj
+
+QtChess_autogen/mocs_compilation.i: QtChess_autogen/mocs_compilation.cpp.i
+.PHONY : QtChess_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+QtChess_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/QtChess_autogen/mocs_compilation.cpp.i
+.PHONY : QtChess_autogen/mocs_compilation.cpp.i
+
+QtChess_autogen/mocs_compilation.s: QtChess_autogen/mocs_compilation.cpp.s
+.PHONY : QtChess_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+QtChess_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/QtChess_autogen/mocs_compilation.cpp.s
+.PHONY : QtChess_autogen/mocs_compilation.cpp.s
 
 src/gui/main.obj: src/gui/main.cpp.obj
 .PHONY : src/gui/main.obj
 
 # target to build an object file
 src/gui/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtExample.dir\build.make CMakeFiles/QtExample.dir/src/gui/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/src/gui/main.cpp.obj
 .PHONY : src/gui/main.cpp.obj
 
 src/gui/main.i: src/gui/main.cpp.i
@@ -141,7 +191,7 @@ src/gui/main.i: src/gui/main.cpp.i
 
 # target to preprocess a source file
 src/gui/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtExample.dir\build.make CMakeFiles/QtExample.dir/src/gui/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/src/gui/main.cpp.i
 .PHONY : src/gui/main.cpp.i
 
 src/gui/main.s: src/gui/main.cpp.s
@@ -149,7 +199,7 @@ src/gui/main.s: src/gui/main.cpp.s
 
 # target to generate assembly for a file
 src/gui/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtExample.dir\build.make CMakeFiles/QtExample.dir/src/gui/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\QtChess.dir\build.make CMakeFiles/QtChess.dir/src/gui/main.cpp.s
 .PHONY : src/gui/main.cpp.s
 
 # Help Target
@@ -160,7 +210,12 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... QtExample
+	@echo ... QtChess_autogen
+	@echo ... QtChess_autogen_timestamp_deps
+	@echo ... QtChess
+	@echo ... QtChess_autogen/mocs_compilation.obj
+	@echo ... QtChess_autogen/mocs_compilation.i
+	@echo ... QtChess_autogen/mocs_compilation.s
 	@echo ... src/gui/main.obj
 	@echo ... src/gui/main.i
 	@echo ... src/gui/main.s

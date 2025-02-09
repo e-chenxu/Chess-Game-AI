@@ -1,10 +1,18 @@
-cmake_minimum_required(VERSION 3.15)
-project(QtExample)
+cmake_minimum_required(VERSION 3.5)
+project(QtChess)
 
-set(CMAKE_CXX_STANDARD 14)
+# Enable automatic Qt features
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets)
+# Find the required Qt6 components
+find_package(Qt6 COMPONENTS Widgets Core Gui REQUIRED)
 
-add_executable(QtExample ../src/gui/main.cpp)
+# Add the source files
+add_executable(QtChess src/gui/main.cpp)
 
-target_link_libraries(QtExample Qt6::Widgets)
+# Link against Qt libraries
+target_link_libraries(QtChess Qt6::Widgets Qt6::Core Qt6::Gui)
+
+qt_add_resources(QtChess "resources.qrc")

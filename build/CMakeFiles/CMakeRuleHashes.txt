@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+f111c0182026be2ec3720d662f2f6469 CMakeFiles/QtChess_autogen
+bf909fbf78007b1eeeb6f1b33dbb9eef QtChess_autogen/timestamp

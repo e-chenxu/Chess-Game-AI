@@ -1,3 +1,6 @@
 {
-    "makefile.makePath": "C:\\Program Files (x86)\\GnuWin32\\bin\\make.exe"
+    "makefile.makePath": "C:\\Program Files (x86)\\GnuWin32\\bin\\make.exe",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }

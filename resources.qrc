@@ -1,0 +1,17 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>resources/pieces/bB.png</file>
+        <file>resources/pieces/bK.png</file>
+        <file>resources/pieces/bN.png</file>
+        <file>resources/pieces/bP.png</file>
+        <file>resources/pieces/bQ.png</file>
+        <file>resources/pieces/bR.png</file>
+        <file>resources/pieces/wB.png</file>
+        <file>resources/pieces/wK.png</file>
+        <file>resources/pieces/wN.png</file>
+        <file>resources/pieces/wP.png</file>
+        <file>resources/pieces/wQ.png</file>
+        <file>resources/pieces/wR.png</file>
+    </qresource>
+</RCC>
